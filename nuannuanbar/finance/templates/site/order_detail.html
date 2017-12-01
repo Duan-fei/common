@@ -1,0 +1,511 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<ol class="breadcrumb">
+    <li><a href="/">订单列表</a></li>
+    <li class="active">订单详情</li>
+</ol>
+
+<div class="panel panel-default" style="margin-bottom: 50px">
+
+    <!--订单基本信息 -->
+    <div class="panel panel-default">
+        <table class="table table-bordered table-striped">
+            <thead>
+
+            <h4 style="color: #31708f; padding-left: 7px">
+                订单基本信息
+            </h4>
+
+
+            </thead>
+            <tbody>
+            <tr>
+                <td>订单号</td>
+                <td>{{ data.id }}</td>
+                <td>商户订单号</td>
+                <td>{{ data.org_order_id }}</td>
+                <td>条码</td>
+                <td>{{ data.barcode }}</td>
+            </tr>
+            <tr>
+                <td>订单来源</td>
+                <td>{{ data.source_channel }}</td>
+                <td>结算方式</td>
+                <td>{{ data.pay_type }}</td>
+                <td>城市</td>
+                <td>{{ data.city_code }}</td>
+            </tr>
+            <tr>
+                <td>商家名称</td>
+                <td>{{ data.seller.name }}</td>
+
+                <td>状态</td>
+                <td>{{ data.state }}</td>
+                <td>物流状态</td>
+                <td>{{ data.delivery_state }}</td>
+            </tr>
+            <tr>
+                <td>发货人</td>
+                <td>{{ data.consignor.name }}</td>
+                <td>发货人电话</td>
+                <td>{{ data.consignor.tel }} / {{ data.consignor.mobile }}</td>
+                <td>发货地址</td>
+                <td>{{ data.consignor.address }}</td>
+            </tr>
+            <tr>
+                <td>收货人</td>
+                <td>{{ data.consignee.name }}</td>
+                <td>收货人电话</td>
+                <td>{{ data.consignee.tel }} / {{ data.consignee.mobile }}</td>
+                <td>收货地址</td>
+                <td>{{ data.consignee.address }}</td>
+            </tr>
+            <tr>
+                <td>订单金额</td>
+                <td>{{ data.order_amount }} 元</td>
+                <td>配送费</td>
+                <td>{{ data.shipping_fee }} 元</td>
+                <td>距离</td>
+                <td>{{ data.distance }} km</td>
+            </tr>
+            <!--<tr>-->
+            <!--<td>代收金额</td>-->
+            <!--<td>*</td>-->
+            <!--<td>代付金额</td>-->
+            <!--<td colspan="3">*</td>-->
+            <!--</tr>-->
+            <tr>
+                <td>备注</td>
+                <td colspan="5">{{ data.note }}</td>
+
+            </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <!--订单状态信息-->
+    <div class="panel panel-default">
+        <table class="table table-bordered table-striped">
+            <thead>
+
+            <h4 style="color: #31708f; padding-left: 7px">
+                订单状态信息
+            </h4>
+            </thead>
+            <tbody>
+            <tr>
+                <!--create_at-->
+                <td>创建时间</td>
+                <td>{{ data.created_at }}</td>
+
+                <!--shipping_time-->
+                <td>要求送达时间</td>
+                <td>{{ data.shipping_time }}</td>
+                <!--done_at-->
+                <td>完成时间</td>
+                <td>{{ data.done_at }}</td>
+            </tr>
+            <tr>
+                <td>关闭类型</td>
+                <td>{{ data.closed_type }}</td>
+                <!--<td>关闭人</td>-->
+                <!--<td>*</td>-->
+                <td>关闭原因</td>
+                <td >{{ data.closed_note}}</td>
+                <td>关闭时间</td>
+                <!--closed_at-->
+                <td>{{ data.closed_at }}</td>
+            </tr>
+            <!--<tr>-->
+                <!--closed_note-->
+                <!--<td>关闭原因</td>-->
+                <!--<td colspan="5">{{ data.closed_note}}</td>-->
+
+
+            <!--</tr>-->
+            <tr>
+                <td>异常类型</td>
+                <td>{{ data.error_type }}</td>
+                <td>异常原因</td>
+                <td>{{ data.error_note }}</td>
+                <!--<td>操作人</td>-->
+                <!--<td>*</td>-->
+                <td>异常时间</td>
+                <td>{{ data.error_at }}</td>
+            </tr>
+            <!--<tr>-->
+                <!--<td>异常原因</td>-->
+                <!--<td colspan="5">{{ data.error_note }}</td>-->
+            <!--</tr>-->
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <!--总运单信息-->
+    {% if data.shipment_master %}
+
+    <p id="master_shipment_id" shipment_id="{{ data.shipment_master.id }}"></p>
+
+    <div class="panel panel-default">
+
+        <table class="table table-bordered table-striped">
+            <thead>
+
+            <h4 style="color: #31708f; padding-left: 7px">
+                总运单信息
+            </h4>
+
+            </thead>
+            <tbody>
+
+            <tr>
+                <td>运单号</td>
+                <td>{{ data.shipment_master.id }}</td>
+                <td>运单状态</td>
+                <td>{{ data.shipment_master.state }}</td>
+                <td>物流状态</td>
+                <td>{{ data.shipment_master.delivery_state }}</td>
+            </tr>
+            <tr>
+                <td>服务商名称</td>
+                {% if data.tms_biz_info %}
+                <td>{{data.tms_biz_info[0].tms.name}}</td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                <td>供应商名称</td>
+                <td>{{data.shipment_master.supply_vendor_info.name}}</td>
+                <td>区域名称</td>
+                <td>{{data.shipment_master.area.name}}</td>
+            </tr>
+            <tr>
+                <td>骑士名称</td>
+                <td>{{data.shipment_master.courier.name}}</td>
+                <td>骑士电话</td>
+                <td>{{data.shipment_master.courier.mobile}}</td>
+                <td>子区域名称</td>
+                <td>暂不显示</td>
+            </tr>
+            <tr>
+                <td>创建时间</td>
+                <td>{{data.shipment_master.created_at}}</td>
+                <!--<td>确认时间</td>-->
+                <!--<td>*</td>-->
+
+                <td>接单时间</td>
+                <td>{{data.shipment_master.accepted_at}}</td>
+                <td>到店时间</td>
+                <td>{{data.shipment_master.arrived_at}}</td>
+            </tr>
+
+            <tr>
+
+                <td>取货时间</td>
+                <td>{{data.shipment_master.pickup_at}}</td>
+                <td>完成时间</td>
+                <td colspan="3">{{data.shipment_master.done_at}}</td>
+            </tr>
+            <tr>
+                <td>异常类型</td>
+                <td>{{data.shipment_master.error_flag}}</td>
+                <td>异常原因</td>
+                <td>{{data.shipment_master.error_note}}</td>
+                <td>异常时间</td>
+                <td>{{data.shipment_master.error_at}}</td>
+            </tr>
+            <tr>
+                <td>关闭类型</td>
+                <td>{{data.shipment_master.closed_type}}</td>
+                <td>关闭原因</td>
+                <td>{{data.shipment_master.closed_note}}</td>
+                <td>关闭时间</td>
+                <td>{{data.shipment_master.closed_at}}</td>
+            </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+
+    <!--&lt;!&ndash;总运单推单信息&ndash;&gt;-->
+    <!--<div class="panel panel-default" style="margin-bottom: 50px">-->
+        <!--<div class="panel panel-default">-->
+            <!--<table class="table table-bordered table-striped">-->
+                <!--<thead>-->
+                <!--<h4 style="color: #31708f; padding-left: 7px">-->
+                    <!--总运单推单信息-->
+                <!--</h4>-->
+                <!--<tr>-->
+
+                    <!--<th>骑士姓名</th>-->
+                    <!--<th>派单模式</th>-->
+                    <!--<th>调度模式</th>-->
+                    <!--<th>过期时间</th>-->
+                    <!--<th>状态</th>-->
+                <!--</tr>-->
+                <!--</thead>-->
+                <!--<tbody id="master_body">-->
+
+
+                <!--</tbody>-->
+            <!--</table>-->
+
+
+        <!--</div>-->
+        <!--<div style="padding-bottom: 50px">-->
+            <!--<p id="page_num" num="1" flag="true"></p>-->
+            <!--<button type="button" class="btn btn-default pull-right" onclick="get_next('master')">下一页</button>-->
+            <!--<button type="button" class="btn btn-primary pull-right" onclick="get_prev('master')">上一页</button>-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+    <!--总运单物流信息-->
+    <div class="panel panel-default">
+
+        <table class="table table-bordered table-striped">
+            <thead>
+            <h4 style="color: #31708f; padding-left: 7px">
+                总运单物流信息
+            </h4>
+            </thead>
+            <tbody>
+            <tr>
+                <td>状态</td>
+{#                <td>操作</td>#}
+                <td>操作时间</td>
+                <td>操作人</td>
+                <td>联系方式</td>
+            </tr>
+
+
+            {% for i in data.master_track %}
+                <tr>
+                    <!--<td>{{ i.shipment_state}}</td>-->
+                    <td>{{ i.event }}</td>
+                    <td>{{ i.created_at}}</td>
+                    <!--<td></td>-->
+                    {% if i.operator_info %}
+                        <td>{{i.operator_info.name }}</td>
+                        <td>{{i.operator_info.mobile }}</td>
+                    {% elif i.courier_info %}
+                        <td>{{i.courier_info.name }}</td>
+                        <td>{{i.courier_info.mobile }}</td>
+                    {% else %}
+                        <td></td>
+                        <td></td>
+                    {% endif %}
+                    <!--<td> i.operator_info.name</td>-->
+                    <!--<td> i.operator_info.mobile</td>-->
+                </tr>
+            {% endfor %}
+
+
+            </tbody>
+        </table>
+    </div>
+
+    {% endif %}
+
+
+    <!--子运单信息-->
+
+    {% if data.shipment_chil %}
+
+
+
+    <!--推单信息-->
+    <div class="panel panel-default" style="margin-bottom: 50px">
+        <div class="panel panel-default">
+            <table class="table table-bordered table-striped">
+                <thead>
+                <h4 style="color: #31708f; padding-left: 7px">
+                    当日推单记录
+                </h4>
+                <tr>
+
+                    <th>骑士姓名</th>
+                    <th>派单模式</th>
+                    <!--<th>调度模式</th>-->
+
+                    <th>有效时间</th>
+                    <th>推单时间</th>
+                    <th>过期时间</th>
+                    <th>是否超时</th>
+                    <th>状态</th>
+                </tr>
+                </thead>
+                <tbody id="chil_body">
+
+
+                </tbody>
+            </table>
+
+        </div>
+
+
+            <span class="pull-right" style="margin-right: 15px">
+     共<span id="page_count_num"></span> 页
+    </span>
+    <span class="pull-right" style="margin-right: 15px">
+    当前第 <span id="page_current"></span> 页
+    </span>
+   <span class="pull-right" style="margin-right: 15px">
+    共 <span id="page_count"></span> 条
+    </span>
+    </div>
+
+        <div style="padding-bottom: 50px">
+            <p id="chil_page_num" num="1" flag="true"></p>
+            <button type="button" class="btn btn-default pull-right" onclick="get_next('chil')">下一页</button>
+            <button type="button" class="btn btn-primary pull-right" onclick="get_prev('chil')">上一页</button>
+        </div>
+    </div>
+
+    <p id="chil_shipment_id" shipment_id="{{ data.shipment_chil.id }}"></p>
+
+    <div class="panel panel-default">
+        <table class="table table-bordered table-striped">
+            <thead>
+            <h4 style="color: #31708f; padding-left: 7px">
+                子运单信息
+            </h4>
+            </thead>
+            <tbody>
+            <tr>
+                <td>运单号</td>
+                <td>{{ data.shipment_chil.id }}</td>
+                <td>运单状态</td>
+                <td>{{ data.shipment_chil.state }}</td>
+                <td>物流状态</td>
+                <td>{{ data.shipment_chil.delivery_state }}</td>
+            </tr>
+            <tr>
+
+                <td>服务商名称</td>
+                {% if data.tms_biz_info %}
+                <td>{{data.tms_biz_info[0].tms.name}}</td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                <td>供应商名称</td>
+                <td>{{data.shipment_chil.supply_vendor_info.name}}</td>
+                <td>区域名称</td>
+                <td>{{data.shipment_chil.area.name}}</td>
+            </tr>
+            <tr>
+                <td>骑士名称</td>
+                <td>{{data.shipment_chil.courier.name}}</td>
+                <td>骑士电话</td>
+                <td>{{data.shipment_chil.courier.mobile}}</td>
+                <td>子区域名称</td>
+                <td>暂不显示</td>
+            </tr>
+            <tr>
+                <td>创建时间</td>
+                <td>{{data.shipment_chil.created_at}}</td>
+                <!--<td>确认时间</td>-->
+                <!--<td>*</td>-->
+                <td>接单时间</td>
+                <td>{{data.shipment_chil.accepted_at}}</td>
+                <td>到店时间</td>
+                <td>{{data.shipment_chil.arrived_at}}</td>
+            </tr>
+
+            <tr>
+                <!--<td>到店时间</td>-->
+                <!--<td>{{data.shipment_chil.arrived_at}}</td>-->
+                <td>取货时间</td>
+                <td>{{data.shipment_chil.pickup_at}}</td>
+                <td>完成时间</td>
+                <td colspan="3">{{data.shipment_chil.done_at}}</td>
+            </tr>
+            <tr>
+                <td>异常类型</td>
+                <td>{{data.shipment_chil.error_flag}}</td>
+                <td>异常原因</td>
+                <td>{{data.shipment_chil.error_note}}</td>
+                <td>异常时间</td>
+                <td>{{data.shipment_chil.error_at}}</td>
+            </tr>
+            <tr>
+                <td>关闭类型</td>
+                <td>{{data.shipment_chil.closed_type}}</td>
+                <td>关闭原因</td>
+                <td>{{data.shipment_chil.closed_note}}</td>
+                <td>关闭时间</td>
+                <td>{{data.shipment_chil.closed_at}}</td>
+            </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+    <!--子运单物流信息-->
+    <div class="panel panel-default">
+
+
+        <table class="table table-bordered table-striped">
+            <thead>
+            <h4 style="color: #31708f; padding-left: 7px">
+                子运单物流信息
+            </h4>
+            </thead>
+            <tbody>
+            <tr>
+                <td>状态</td>
+                <!--<td>操作</td>-->
+                <td>操作时间</td>
+                <td>操作人</td>
+                <td>联系方式</td>
+            </tr>
+
+
+            {% for i in data.chil_track %}
+            <tr>
+                <!--<td>{{ i.shipment_state}}</td>-->
+                <td>{{ i.event }}</td>
+                <td>{{ i.created_at}}</td>
+                <!--<td></td>-->
+                {% if i.operator_info %}
+                <td>{{i.operator_info.name }}</td>
+                <td>{{i.operator_info.mobile }}</td>
+                {% elif i.courier_info %}
+                <td>{{i.courier_info.name }}</td>
+                <td>{{i.courier_info.mobile }}</td>
+                {% else %}
+                <td></td>
+                <td></td>
+                {% endif %}
+                <!--<td> i.operator_info.name</td>-->
+                <!--<td> i.operator_info.mobile</td>-->
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+    {% endif %}
+
+</div>
+
+
+{% endblock %}
+
+{% block script %}
+
+<script src="/static/js/dashboard/order.js"></script>
+
+{% endblock %}
+

@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+
+    <div>
+        <div class="col-md-12 ">
+            <form>
+                <h3>测试环境部署</h3>
+
+{#                <div class="col-md-12 col-sm-12 col-xs-12">#}
+{##}
+{##}
+{#                    <div class="x_content">#}
+{##}
+{##}
+{#                        <div id="wizard" class="form_wizard wizard_horizontal">#}
+{#                            <ul class="wizard_steps">#}
+{#                                <li>#}
+{#                                    <a href="#step-1">#}
+{#                                        <span class="step_no">1</span>#}
+{#                            <span class="step_descr">#}
+{##}
+{#                                              <small>待发布</small>#}
+{#                                          </span>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="#step-2" class="disabled">#}
+{#                                        <span class="step_no">2</span>#}
+{#                            <span class="step_descr">#}
+{##}
+{#                                              <small>发布中</small>#}
+{#                                          </span>#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                                <li>#}
+{#                                    <a href="#step-3" class="disabled">#}
+{#                                        <span class="step_no">3</span>#}
+{#                            <span class="step_descr">#}
+{##}
+{#                                              <small>发布成功</small>#}
+{#                                          </span>#}
+{#                                    </a>#}
+{#                                </li>#}
+{##}
+{#                            </ul>#}
+{##}
+{##}
+{#                        </div>#}
+{#                        <!-- End SmartWizard Content -->#}
+{#                    </div>#}
+{##}
+{#                </div>#}
+
+                <div class="form-group " style="margin-top: 15px">
+                    <label for="org_type">项目</label>
+                    <select class="form-control " id="project">
+                        {% for project_id, project_name in projects.iteritems() %}
+                            <option value="{{ project_id }}">{{ project_name }}</option>
+                        {% endfor %}
+                    </select>
+
+                </div>
+
+                <div>
+                    <label for="tag">版本号</label>
+                    <input type="text" id="tag" class="form-control" placeholder="版本号" required=""/>
+                </div>
+
+                <div>
+                    <label for="msg">备注</label>
+                    <textarea id="msg"  class="form-control" maxlength="150"></textarea>
+                </div>
+                {#                    <input type="tel" id="tel" class="form-control"  placeholder="手机号" required=""/>#}
+                {#                </div>#}
+                {##}
+                <button class="btn btn-info" id="publish_btn" type="button"
+                        style="text-shadow: 0 0px 0 #fff;width: 100%; margin-top: 15px;">部署
+                </button>
+
+
+            </form>
+        </div>
+
+
+    </div>
+
+
+    <div id="msg_body" class="panel panel-default  col-md-12 col-sm-12"
+         style="margin-top: 15px; height: 300px; overflow-x: scroll; overflow-y: scroll">
+
+
+    </div>
+
+    <div class="modal fade" id="publish_modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">发布信息</h4>
+                </div>
+                <div class="modal-body" id="publish_msg">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button id="submit" type="button" class="btn btn-primary">确认</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+
+{% endblock %}
+
+{% block script %}
+
+    <script src="/static/js/dashboard/publish.js"></script>
+
+{% endblock %}
+

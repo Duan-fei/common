@@ -1,0 +1,232 @@
+1入驻申请
+请求url： //
+请求方式：POST
+数据格式：string/json/xml
+请求参数：
+参数名称          是否必须          参数说明        类型          枚举值
+company_name      是             公司名称        string
+address           是             公司地址        string
+name              是             联系人          string
+tel               是             联系电话        string
+company_num       否             公司人数        int
+comment           否             留言备注        string
+referrer_tel      否             推荐人手机号     string
+location          是             定位            int           1北京 2沈阳 3苏州
+
+
+相应参数：
+参数名称
+errno='0'
+errmsg='OK'
+
+
+
+
+2登录
+请求url： /login/post_check_login/
+请求方式：POST
+数据格式：string/json/xml
+请求参数：
+参数名称          是否必须          参数说明        类型          枚举值
+email             是             邮箱          string
+password          是             密码          string
+
+
+相应参数：
+参数名称               参数说明             类型
+errno                  '0'         
+errmsg                'OK'
+user_id		      账号id             int
+name		      用户姓名		string
+status		      账号权限		 int
+role_code             账号角色		 int
+
+
+
+3登出
+请求url： /login/login_out_port/
+请求方式：POST
+数据格式：string/json/xml
+请求参数：
+参数名称          是否必须          参数说明        类型          枚举值
+
+
+相应参数：
+参数名称               参数说明             类型
+errno                  '0'         
+errmsg                'OK'
+
+
+
+4用户列表信息
+请求url： /user/user_list/
+请求方式：GET
+数据格式：string/json/xml
+请求参数：
+参数名称          是否必须          参数说明        类型          枚举值
+email             否             邮箱          string
+status	 	  否		 状态          int	  [100,-100]
+role_code	  否		 角色	      int         [1000超级管理员,1001普通用户]
+page		  是		page	      int	      
+
+
+相应参数：
+参数名称               参数说明             类型
+errno                  '0'         
+errmsg                'OK'
+data		      数据	         dict
+[data][current_page] 当前页	         int
+[data][totle]	     数据总条数		 int
+[data][total_page]   总页数   		 int
+[data][account][i]{‘_id’}   用户id	 int
+[data][account][i]{‘city’}  城市id	 int
+[data][account][i]{‘name’}  用户名	 string
+[data][account][i]{‘email’} 邮箱	 	 string
+[data][account][i]{‘created_at’}  创建时间	 string
+[data][account][i]{‘status’}  状态	 int
+
+
+
+
+5添加新用户
+请求url： /user/post_add_user/
+请求方式：POST
+数据格式：string/json/xml
+请求参数：
+参数名称          是否必须          参数说明        类型          枚举值
+name              是             用户名         string
+email		  是		 邮箱	      string
+city		  是	         城市code       int	    [1北京，2沈阳，3苏州]
+password	  是		 密码	       string
+role_code	  是		 角色code       int	    [1000超管,1001普通用户]
+
+
+相应参数：
+参数名称               参数说明             类型
+errno                  '0'         
+errmsg                'OK'
+
+
+
+6编辑用户信息
+请求url： /user/post_compile_user/
+请求方式：POST
+数据格式：string/json/xml
+请求参数：
+参数名称          是否必须          参数说明        类型          枚举值
+user_id           是             用户id         int
+city		  否	         城市code       int	    [1北京，2沈阳，3苏州]
+password	  否		 密码	       string
+role_code	  否		 角色code       int	    [1000超管,1001普通用户]
+
+
+相应参数：
+参数名称               参数说明             类型
+errno                  '0'         
+errmsg                'OK'
+
+
+
+7查看密码
+请求url： /user/check_password/
+请求方式：GET
+数据格式：string/json/xml
+请求参数：
+参数名称          是否必须          参数说明        类型          枚举值
+user_id            是             用户id       string
+
+
+相应参数：
+参数名称               参数说明             类型
+errno                  '0'         
+errmsg                'OK'
+data		       数据		dict
+[data]{‘name’}	       用户名		string
+[data]{‘email’}	       邮箱		string
+[data]{‘password’}     密码		string
+
+
+
+7更改状态
+请求url： /user/post_change_status/
+请求方式：GET
+数据格式：string/json/xml
+请求参数：
+参数名称          是否必须          参数说明        类型          枚举值
+user_id            是             用户id       string
+status		   是		  状态		int	   [100,-100]
+
+
+相应参数：
+参数名称               参数说明             类型
+errno                  '0'         
+errmsg                'OK'
+
+
+
+8删除账号信息
+请求url： /user/delete_user/
+请求方式：DELETE
+数据格式：string/json/xml
+请求参数：
+参数名称          是否必须          参数说明        类型          枚举值
+user_id            是             用户id       string
+
+
+相应参数：
+参数名称               参数说明             类型
+errno                  '0'         
+errmsg                'OK'
+
+
+
+
+9入驻信息列表
+请求url： /enter_list/
+请求方式：GET
+数据格式：string/json/xml
+请求参数：
+参数名称          是否必须          参数说明        类型          枚举值
+keyword           否              关键字        string
+location	  否		  城市          int	  [1北京 2沈阳 3苏州]
+start_date	  否		 开始时间	      string        ‘YYYY-MM-dd’
+end_date	  否		 结束时间	      string
+page		  是		  page	      int	      
+
+
+相应参数：
+参数名称               参数说明             类型
+errno                  '0'         
+errmsg                'OK'
+data		      数据	         dict
+[data][current_page] 当前页	         int
+[data][totle]	     数据总条数		 int
+[data][total_page]   总页数   		 int
+[data][enter][i]{‘_id’}   入驻id	 int
+[data][enter][i]{‘location’}  城市code	 int
+[data][enter][i]{‘name’}  联系人	 string
+[data][enter][i]{‘tel’}   联系电话	 	 string
+[data][enter][i]{‘created_at’}  创建时间	 string
+[data][enter][i]{‘company_name’}  公司名	 string
+[data][enter][i]{‘address’}  公司地址	 string
+[data][enter][i]{‘referrer_tel’}  推荐人电话	 string
+[data][enter][i]{‘company_num’}  公司人数	 string
+[data][enter][i]{‘comment’}  备注	 string
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
