@@ -14,6 +14,7 @@ Migrate(app, db)
 manager = Manager(app)
 manager.add_command("db", MigrateCommand)
 print 11
+print 22
 
 if __name__ == '__main__':
     print app.url_map
