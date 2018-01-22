@@ -8,7 +8,7 @@ from flask_cors import *
 from ihome import models
 #应用程序实例，指定开发者模式
 app = create_app("development")
-CORS(app)
+# CORS(app)
 #创建数据库表
 Migrate(app, db)
 manager = Manager(app)

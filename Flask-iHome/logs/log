@@ -2579,3 +2579,171 @@ INFO _internal.py:87 127.0.0.1 - - [12/Nov/2017 14:16:00] "GET /?__debugger__=ye
 INFO _internal.py:87 127.0.0.1 - - [12/Nov/2017 14:16:00] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
 INFO _internal.py:87 127.0.0.1 - - [12/Nov/2017 14:16:00] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
 INFO _internal.py:87 127.0.0.1 - - [12/Nov/2017 14:16:00] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 152-671-691
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 152-671-691
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:04:19] "GET / HTTP/1.1" 500 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:04:19] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:04:19] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:04:19] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:04:19] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:04:20] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:04:20] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:04:36] "GET /index HTTP/1.1" 500 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:04:36] "GET /index?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:04:36] "GET /index?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:04:36] "GET /index?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:04:36] "GET /index?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:04:36] "GET /index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:04:37] "GET /index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 152-671-691
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:09:38] "GET / HTTP/1.1" 500 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:09:38] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:09:38] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:09:38] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:09:38] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:09:38] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 152-671-691
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:57] "GET / HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:57] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:57] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:57] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:57] "GET /static/plugins/swiper/css/swiper.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:57] "GET /static/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:57] "GET /static/css/ihome/main.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:57] "GET /static/css/ihome/index.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:57] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:57] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:57] "GET /static/plugins/swiper/js/swiper.jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:57] "GET /static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:57] "GET /static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:57] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:57] "GET /static/js/template.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:57] "GET /static/js/ihome/index.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:57] "GET /static/images/logo@128x59.png HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:57] "GET /api/v1.0/session HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:59] "GET /api/v1.0/houses/index HTTP/1.1" 500 -
+ERROR house.py:49 (_mysql_exceptions.OperationalError) (1049, "Unknown database 'ihome10'")
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:59] "GET /api/v1.0/areas HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:13:59] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:14:03] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:14:03] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:14:37] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:14:37] "GET /static/css/ihome/register.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:14:37] "GET /static/js/ihome/register.js?v=4 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:14:38] "GET /api/v1.0/imagecode/dfbb1f5f-8258-4ae1-af83-fa0a198b8c5a HTTP/1.1" 200 -
+ERROR verifycode.py:97 (_mysql_exceptions.OperationalError) (1049, "Unknown database 'ihome10'")
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:14:52] "GET /api/v1.0/smscode/15500055605?text=4Ln9&id=dfbb1f5f-8258-4ae1-af83-fa0a198b8c5a HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:14:56] "GET /api/v1.0/smscode/15500055605?text=4Ln9&id=dfbb1f5f-8258-4ae1-af83-fa0a198b8c5a HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:14:57] "GET /api/v1.0/smscode/15500055605?text=4Ln9&id=dfbb1f5f-8258-4ae1-af83-fa0a198b8c5a HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:14:57] "GET /api/v1.0/smscode/15500055605?text=4Ln9&id=dfbb1f5f-8258-4ae1-af83-fa0a198b8c5a HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:14:59] "GET /api/v1.0/smscode/15500055605?text=4Ln9&id=dfbb1f5f-8258-4ae1-af83-fa0a198b8c5a HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:30:46] "GET /login.html HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:30:46] "GET /static/css/ihome/login.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:30:46] "GET /static/js/ihome/login.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:30:55] "GET /api/v1.0/imagecode/811ad0fc-337e-4ea8-a7d1-b3f5e7a3dc1c HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:30:56] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:30:59] "GET /search.html?aid=&aname=&sd=&ed= HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:30:59] "GET /static/css/ihome/search.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:30:59] "GET /static/js/ihome/search.js HTTP/1.1" 200 -
+ERROR house.py:49 (_mysql_exceptions.OperationalError) (1049, "Unknown database 'ihome10'")
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:31:00] "GET /api/v1.0/areas HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:31:01] "GET /api/v1.0/session HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:31:02] "GET /api/v1.0/houses/index HTTP/1.1" 500 -
+ERROR house.py:49 (_mysql_exceptions.OperationalError) (1049, "Unknown database 'ihome10'")
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:31:02] "GET /api/v1.0/areas HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:31:02] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:35:44] "GET /api/v1.0/imagecode/945596c9-92ed-4393-9975-db4fc816445a HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:35:52] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:35:54] "GET / HTTP/1.1" 304 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:35:54] "GET /api/v1.0/session HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:35:54] "GET /api/v1.0/houses/index HTTP/1.1" 500 -
+ERROR house.py:49 (_mysql_exceptions.OperationalError) (1049, "Unknown database 'ihome10'")
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:35:54] "GET /api/v1.0/areas HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 16:35:54] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 152-671-691
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 152-671-691
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 152-671-691
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 17:07:07] "GET /login HTTP/1.1" 404 -
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 152-671-691
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 17:10:59] "POST / HTTP/1.1" 404 -
+INFO _internal.py:87  * Detected change in '/Users/user/Desktop/Flask-iHome/ihome/api_1_0/login.py', reloading
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 152-671-691
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 152-671-691
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 17:14:51] "POST /login/ HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 17:14:58] "POST /login/ HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 17:15:02] "POST /login HTTP/1.1" 404 -
+INFO _internal.py:87  * Detected change in '/Users/user/Desktop/Flask-iHome/ihome/api_1_0/login.py', reloading
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 152-671-691
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 17:16:11] "POST /login HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 17:17:01] "POST /login?email=123&password=123 HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 17:17:23] "POST /login HTTP/1.1" 404 -
+INFO _internal.py:87  * Detected change in '/Users/user/Desktop/Flask-iHome/ihome/__init__.py', reloading
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 152-671-691
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 17:47:26] "POST /login HTTP/1.1" 404 -
+INFO _internal.py:87  * Detected change in '/Users/user/Desktop/Flask-iHome/ihome/api_1_0/login.py', reloading
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 152-671-691
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 17:47:57] "POST /login HTTP/1.1" 404 -
+INFO _internal.py:87  * Detected change in '/Users/user/Desktop/Flask-iHome/ihome/__init__.py', reloading
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 152-671-691
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 17:50:07] "POST /login HTTP/1.1" 404 -
+INFO _internal.py:87  * Detected change in '/Users/user/Desktop/Flask-iHome/ihome/api_1_0/__init__.py', reloading
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 152-671-691
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 17:51:23] "POST /login HTTP/1.1" 404 -
+INFO _internal.py:87  * Detected change in '/Users/user/Desktop/Flask-iHome/ihome/__init__.py', reloading
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 152-671-691
+INFO _internal.py:87 127.0.0.1 - - [20/Jan/2018 17:53:56] "POST /api/v1.0/login HTTP/1.1" 200 -
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 152-671-691
+INFO _internal.py:87  * Detected change in '/Users/user/Desktop/Flask-iHome/config.py', reloading
+INFO _internal.py:87  * Restarting with stat
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 152-671-691
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 152-671-691
