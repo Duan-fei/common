@@ -1,0 +1,13 @@
+version: '3.2'
+services:
+    dnsmasq:
+        image: dnsmasq 
+        container_name: dnsmasq
+        network_mode: host
+        restart: always
+        volumes:
+            - ./data:/etc/dnsmasq
+        ports:
+            - "53"
+        cap_add:
+            - NET_ADMIN

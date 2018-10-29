@@ -1,0 +1,25 @@
+version: '3.2'
+services:
+    openvpn:
+        image: openvpn 
+        container_name: openvpn
+        network_mode: host
+        restart: always
+        volumes:
+            - ./data:/etc/openvpn
+        ports:
+            - "1194"
+        cap_add:
+            - NET_ADMIN
+        environment:
+            - SERVER=[[ SERVER_IP ]]  # Server address and distribution IP address(for example: 172.19.0.0 255.255.0.0)
+            - PUSH=[[ PUSH_SERVER_IP ]]  # IP addresses that allow client access(for example: 172.31.0.0 255.255.0.0)
+            - CLIENTREMOTE=[[ CONNECT_SERVER_IP ]]  # The client connects to the server address(for example: 192.168.33.10)
+            - KEY_COUNTRY=[[ COUNTRT ]]  # The state abbreviations(for example: CN)
+            - KEY_PROVINCE=[[ PROVINCE ]]  # Province shorthand(for example: BJ)
+            - KEY_CITY=[[ CITY ]]  # City(for example: BeiJing)
+            - KEY_ORG=[[ ORG ]]  # organisation(for example: shannon.ai)
+            - KEY_OU=[[ OU ]]  # affiliated unit(for example: shannon.ai)
+            - KEY_EMAIL=[[ EMAIL ]]  # Email(for example: contact@shannonai.com)
+            - KEY_SIZE=[[ SIZE ]]  # The private key size(for example: 2048)
+
